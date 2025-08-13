@@ -38,8 +38,19 @@ namespace CalculatorApplication
                     cal.CalculateEvent = new CalculatorClass.Formula<double>(cal.GetSum);
                     answer.Text = cal.GetSum(num1, num2).ToString();
                     break;
+                case "-":
+                    cal.CalculateEvent = new CalculatorClass.Formula<double>(cal.GetDifference);
+                    answer.Text = cal.GetDifference(num1, num2).ToString();
+                    break;
+                case "*":
+                    cal.CalculateEvent = new CalculatorClass.Formula<double>(cal.GetProduct);
+                    answer.Text = cal.GetProduct(num1, num2).ToString();
+                    break;
+                case "/":
+                    cal.CalculateEvent = new CalculatorClass.Formula<double>(cal.GetQuotient);
+                    answer.Text = cal.GetQuotient(num1, num2).ToString();
+                    break;
 
-               
             }
         }
     }
